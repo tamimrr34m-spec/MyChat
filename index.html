@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MyChat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header><h1>MyChat</h1><button id="logout" hidden>Logout</button></header>
+    <section id="auth">
+      <h2>MyChat-এ প্রবেশ করো</h2>
+      <input id="email" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+      <button id="signup">Sign up</button>
+      <button id="login">Login</button>
+      <p id="authMsg"></p>
+    </section>
+
+    <main id="chat" hidden>
+      <aside>
+        <h3>Users</h3>
+        <input id="search" placeholder="Search email...">
+        <div id="users"></div>
+      </aside>
+      <section class="chatbox">
+        <div id="current">একজন user নির্বাচন করো</div>
+        <div id="messages"></div>
+        <form id="sendForm">
+          <input id="message" autocomplete="off" placeholder="Message লিখো...">
+          <button>Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
